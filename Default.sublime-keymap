@@ -1,0 +1,5 @@
+[
+{ 
+	"keys": ["shift+tab"], "command": "greek_letter_expand"
+}
+]
