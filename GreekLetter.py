@@ -58,9 +58,9 @@ class GreekLetterExpandCommand(sublime_plugin.TextCommand):
 		sels = self.view.sel()
 		for sel in sels:
 			key = self.view.substr(sel)
-			replacement = greekmappings[key]
-			print replacement
-			self.view.replace(edit,sel,replacement.decode('utf-8'))
+			if key in greekmappings:
+				replacement = greekmappings[key]
+				self.view.replace(edit,sel,replacement.decode('utf-8'))
 		end = self.view.sel()[0].b
 		pt = sublime.Region(end, end)
 		self.view.sel().clear()
