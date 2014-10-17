@@ -59,7 +59,7 @@ class GreekLetterExpandCommand(sublime_plugin.TextCommand):
 		mathmappings = {
 		'ismember': 'ϵ',
 		'partial': '∂',
-		'therefor': '∴',
+		'therefore': '∴',
 		'integral': '∫',
 		'le': '≤',
 		'ge': '≥',

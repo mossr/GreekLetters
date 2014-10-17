@@ -61,7 +61,7 @@ For the mathematical symbols, refer to this dictionary:
 	mathmappings = {
 	'ismember': 'ϵ',
 	'partial': '∂',
-	'therefor': '∴',
+	'therefore': '∴',
 	'integral': '∫',
 	'le': '≤',
 	'ge': '≥',
