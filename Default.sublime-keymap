@@ -1,5 +1,3 @@
 [
-{ 
-	"keys": ["shift+tab"], "command": "greek_letter_expand"
-}
+	{ "keys": ["shift+tab"], "command": "greek_letter_expand" }
 ]
