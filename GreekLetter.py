@@ -123,7 +123,9 @@ class GreekLetterExpandCommand(sublime_plugin.TextCommand):
 		'_lpar': '₍',
 		'_rpar': '₎',
 		'check': '✓',
-		'CHECK': '✔' # Emoji
+		'CHECK': '✔', # Emoji
+		'C': '✔', # Emoji
+		'X': '✖' # Emoji
 		}
 		self.view.run_command("expand_selection",{"to": "word"})
 		sels = self.view.sel()
