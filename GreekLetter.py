@@ -123,6 +123,7 @@ class GreekLetterExpandCommand(sublime_plugin.TextCommand):
 		'_lpar': '₍',
 		'_rpar': '₎',
 		'check': '✓',
+		'c': '✓',
 		'CHECK': '✔', # Emoji
 		'C': '✔', # Emoji
 		'X': '✖' # Emoji
