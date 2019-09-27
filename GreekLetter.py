@@ -57,10 +57,30 @@ class GreekLetterExpandCommand(sublime_plugin.TextCommand):
 		# double underscore __ for superscripts
 		# single underscore _ for subscripts
 		mathmappings = {
+		'dot': '⦁',
+		'qed': '∎',
+		'QED': '∎',
 		'ismember': 'ϵ',
+		'ismem': 'ϵ',
+		'isel': 'ϵ',
+		'elof': 'ϵ',
+		'elementof': 'ϵ',
+		'notelof': '∉',
+		'notelementof': '∉',
+		'subset': '⊆',
+		'notsubset': '⊈',
+		'nsubset': '⊈',
+		'union': '∪',
+		'intersect': '∩',
+		'emptyset': 'Ø',
+		'aleph': 'ℵ',
+		'power': '℘',
+		'notequal': '≠',
+		'ne': '≠',
 		'partial': '∂',
 		'therefore': '∴',
 		'integral': '∫',
+		'diff': 'Δ',
 		'le': '≤',
 		'ge': '≥',
 		'SUM': 'Σ',
@@ -132,13 +152,14 @@ class GreekLetterExpandCommand(sublime_plugin.TextCommand):
 		sels = self.view.sel()
 		for sel in sels:
 			key = self.view.substr(sel)
+			print( key )
 			if key in greekmappings:
 				replacement = greekmappings[key]
 				self.view.replace(edit,sel,replacement)
 			elif key in mathmappings:
 				replacement = mathmappings[key]
-				if self.view.substr(sublime.Region(sel.a-1, sel.a)) == ' ':
-					sel = sublime.Region(sel.a-1, sel.b)
+				# if self.view.substr(sublime.Region(sel.a-1, sel.a)) == ' ':
+				# 	sel = sublime.Region(sel.a-1, sel.b)
 				self.view.replace(edit,sel,replacement)
 		end = self.view.sel()[0].b
 		pt = sublime.Region(end, end)
